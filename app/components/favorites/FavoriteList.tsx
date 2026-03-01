@@ -123,7 +123,7 @@ export function FavoriteList() {
             </div>
             {favorites.length === 0 && (
               <p className="text-sm text-gray-500">
-                使用多维度分析功能，点击"收藏分析"按钮将感兴趣的股票加入收藏
+                使用多维度分析功能，点击&quot;收藏分析&quot;按钮将感兴趣的股票加入收藏
               </p>
             )}
           </div>

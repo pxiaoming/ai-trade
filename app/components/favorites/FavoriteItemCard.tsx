@@ -98,7 +98,6 @@ export function FavoriteItemCard({
               查看详情
             </Button>
             <Button
-              variant="ghost"
               size="sm"
               onClick={() => onEdit(favorite)}
               className="px-3"
@@ -108,7 +107,6 @@ export function FavoriteItemCard({
               </svg>
             </Button>
             <Button
-              variant="ghost"
               size="sm"
               onClick={() => onDelete(favorite.id)}
               className="px-3 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"

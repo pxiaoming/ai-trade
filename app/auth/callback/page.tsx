@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { handleWechatCallback, WechatUserInfo } from '@/lib/auth';
-import { Card } from '@/components/ui/Card';
+import { Card } from '../../components/ui/Card';
 
 export default function WechatCallback() {
   const router = useRouter();

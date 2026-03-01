@@ -12,7 +12,7 @@ interface DimensionAnalysis {
   [key: string]: any;
 }
 
-interface AnalysisData {
+export interface AnalysisData {
   stockCode: string;
   stockName: string;
   overallScore: number;

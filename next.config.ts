@@ -23,13 +23,6 @@ const nextConfig: NextConfig = {
     return config;
   },
 
-  // 实验性配置
-  experimental: {
-    // 启用新的图片加载器
-    images: {
-      formats: ['image/webp', 'image/avif'],
-    },
-  },
 };
 
 export default nextConfig;

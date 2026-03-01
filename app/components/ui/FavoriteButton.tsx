@@ -4,7 +4,7 @@ import React, { useState, useCallback } from 'react';
 import { Button } from './Button';
 import { FavoriteModal } from './FavoriteModal';
 import { getFavoriteByStockCode, addFavorite } from '@/lib/utils/favorites';
-import { AnalysisData } from '@/app/components/ai/MultiDimensionalAnalysis';
+import { AnalysisData } from '../../components/ai/MultiDimensionalAnalysis';
 
 interface FavoriteButtonProps {
   stockCode: string;

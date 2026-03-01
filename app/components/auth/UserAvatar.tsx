@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { logout, getCurrentUser, isLoggedIn } from '@/lib/auth';
-import { Dropdown, DropdownMenu, DropdownTrigger, DropdownContent, DropdownItem } from '../ui/Dropdown';
+import { logout, getCurrentUser } from '@/lib/auth';
+import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from '../ui/Dropdown';
 import { ChevronDown, LogOut, User } from 'lucide-react';
 
 interface UserAvatarProps {

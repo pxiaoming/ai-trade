@@ -3,8 +3,9 @@ import { getFavoriteByStockCode, deleteFavorite, updateFavorite } from '@/lib/ut
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  props: { params: Promise<{ id: string }> }
 ) {
+  const params = await props.params;
   try {
     // 由于我们使用的是本地存储，需要遍历查找
     const { getFavorites } = await import('@/lib/utils/favorites');
@@ -30,8 +31,9 @@ export async function GET(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  props: { params: Promise<{ id: string }> }
 ) {
+  const params = await props.params;
   try {
     const success = deleteFavorite(params.id);
 
@@ -54,8 +56,9 @@ export async function DELETE(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  props: { params: Promise<{ id: string }> }
 ) {
+  const params = await props.params;
   try {
     const body = await request.json();
     const { tags, notes } = body;
