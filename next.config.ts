@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  output: 'export',
   trailingSlash: true,
 
   // 图片配置
   images: {
-    unoptimized: true, // Vercel 不支持图片优化
+    unoptimized: true,
   },
 
   // Webpack 配置，用于排除某些文件
