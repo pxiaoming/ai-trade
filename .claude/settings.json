@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node test-api.js)",
+      "Bash(npm run dev)",
+      "Bash(npm run dev:next)",
+      "Bash(curl -s http://localhost:3000/api/stocks/ranking)",
+      "Bash(pkill -f \"next.*dev\")",
+      "Bash(pkill -f \"npm.*dev\")",
+      "Bash(lsof -i :3000)",
+      "Bash(lsof -i :3001)",
+      "Bash(lsof -i)",
+      "Bash(pkill -f \"next dev\")"
+    ],
+    "additionalDirectories": [
+      "/Users/minghuipei/ai-trading/.claude"
+    ]
+  }
+}

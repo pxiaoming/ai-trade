@@ -1,0 +1,36 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  // 静态导出，适合 Vercel 部署
+  output: 'export',
+  trailingSlash: true,
+
+  // 图片配置
+  images: {
+    unoptimized: true, // Vercel 不支持图片优化
+  },
+
+  // Webpack 配置，用于排除某些文件
+  webpack: (config, { dev, isServer }) => {
+    // 不打包 Node.js 模块到客户端
+    if (!dev && !isServer) {
+      config.resolve.fallback = {
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+
+    return config;
+  },
+
+  // 实验性配置
+  experimental: {
+    // 启用新的图片加载器
+    images: {
+      formats: ['image/webp', 'image/avif'],
+    },
+  },
+};
+
+export default nextConfig;

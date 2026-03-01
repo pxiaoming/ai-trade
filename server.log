@@ -1,0 +1,86 @@
+
+> ai-trading@0.1.0 dev:next
+> next dev
+
+ ⚠ Port 3000 is in use by process 38194
+98153, using available port 3005 instead.
+   ▲ Next.js 15.5.9
+   - Local:        http://localhost:3005
+   - Network:      http://192.168.3.37:3005
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1527ms
+ ⚠ ./app/api/stocks/ranking/route.ts
+Attempted import error: 'getSinaStockRanking' is not exported from '../../../lib/api/sina' (imported as 'getSinaStockRanking').
+
+Import trace for requested module:
+./app/api/stocks/ranking/route.ts
+获取排行榜失败: TypeError: (0 , _lib_api_sina__WEBPACK_IMPORTED_MODULE_1__.getSinaStockRanking) is not a function
+    at GET (app/api/stocks/ranking/route.ts:6:46)
+  4 | export async function GET() {
+  5 |   try {
+> 6 |     const ranking = await getSinaStockRanking();
+    |                                              ^
+  7 |     return NextResponse.json(ranking);
+  8 |   } catch (error) {
+  9 |     console.error('获取排行榜失败:', error);
+ GET /api/stocks/ranking 500 in 517ms
+ ○ Compiling /api/stocks/ranking .. � ✓ Compiled /api/stocks/ranking in 12m � ✓ Compiled in 75ms (193 modules<w ✓ Compiled in 88ms (193 modules)
+ ✓ Compiled in 53ms (193 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/minghuipei/ai-trading/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/minghuipei/ai-trading/.next/cache/webpack/client-development/0.pack.gz'
+   Reload env: .env.local
+ ✓ Compiled in 109ms (193 modules)
+ ✓ Compiled in 52ms (193 modules)
+ ✓ Compiled in 48ms (193 modules)
+ ✓ Compiled in 136ms (193 modules) ✓ Compiled in 79ms (193 modules)
+ ✓ Compiled in 43ms (193 modules)
+<<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/minghuipei/ai-trading/.next/cache/webpack/client-development/2.pack.gz_' -> '/Users/minghuipei/ai-trading/.next/cache/webpack/client-development/2.pack.gz'  ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...    ▲ Next.js 15.5.9
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.3.37:3001
+   - Environments: .env.local
+
+ ✓ Starting...[ ✓ Ready in 2.9s
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+   ▲ Next.js 15.5.9
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.3.37:3001
+   - Environments: .env.local
+   - Experiments (use with caution):
+     ✓ appDir
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 1379ms (699 modules)
+ GET / 200 in 1668ms
+ ✓ Compiled in 124ms (264 modules)
+ ✓ Compiled in 370ms (695 modules)
+ ✓ Compiled in 210ms (695 modules)
+ ✓ Compiled in 233ms (695 modules)
+ ✓ Compiled in 184ms (693 modules)
+ ✓ Compiled[?25h
+ms (695 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/minghuipei/ai-trading/.next/cache/webpack/client-development/2.pack.gz_' -> '/Users/minghuipei/ai-trading/.next/cache/webpack/client-development/2.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/minghuipei/ai-trading/.next/cache/webpack/server-development/0.pack.gz_' -> '/Users/minghuipei/ai-trading/.next/cache/webpack/server-development/0.pack.gz'
+ ✓ Compiled in 159ms (262 modules)
+ ✓ Compiled in 111ms (262 modules)
+ ✓ Compiled in 117ms (262 modules)
+ ✓ Compiled in 268ms (695 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/minghuipei/ai-trading/.next/cache/webpack/server-development/0.pack.gz_' -> '/Users/minghuipei/ai-trading/.next/cache/webpack/server-development/0.pack.gz'
+ ✓ Compiled in 354ms (695 modules)
+ ✓ Compiled in 159ms (695 modules)
+ ✓ Compiled in 174ms (695 modules)
+ ✓ Compiled in 292ms (695 modules)
+ ✓ Compiled in 188ms (681 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/minghuipei/ai-trading/.next/server/app/page.js'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/minghuipei/ai-trading/.next/server/app/page.js',
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 786ms (1022 modules)
+ GET / 500 in 1176ms
+[?25h
