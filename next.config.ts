@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 静态导出，适合 Vercel 部署
-  output: 'export',
+  output: 'standalone',
   trailingSlash: true,
 
   // 图片配置
