@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 
-const repo = "ai-trade"
 
 const nextConfig: NextConfig = {
-  output: 'export',
   trailingSlash: true,
 
-  basePath: `/${repo}`,
-  assetPrefix: `/${repo}/`,
 
   // 图片配置
   images: {
