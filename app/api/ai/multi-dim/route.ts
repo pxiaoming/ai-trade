@@ -79,15 +79,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 调用智谱AI进行多维度分析
-    const response = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+    // 调用deepseek进行多维度分析
+    const response = await fetch('https://api.deepseek.com/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.ZHIPU_API_KEY}`,
+        'Authorization': `Bearer ${process.env.DEEPSEEK_API_KEY}`,
       },
       body: JSON.stringify({
-        model: 'glm-4-flash',
+        model: 'deepseek-chat',  // deepseek-chat-v3
         messages: [
           {
             role: 'system',
@@ -105,7 +105,7 @@ export async function POST(req: NextRequest) {
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(errorData.error?.message || '智谱AI API 请求失败');
+      throw new Error(errorData.error?.message || 'deepseek API 请求失败');
     }
 
     const data = await response.json();
