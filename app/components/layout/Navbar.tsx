@@ -51,24 +51,6 @@ export function Navbar({ className = '' }: NavbarProps) {
 
           {/* 右侧导航和用户信息 */}
           <div className="flex items-center space-x-2">
-            {/* 导航链接 */}
-            <Link
-              href="/favorites"
-              className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive('/favorites')
-                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700'
-              }`}
-            >
-              <Heart className="w-4 h-4" />
-              <span>我的收藏</span>
-              {/* 收藏数量标记 */}
-              {favoritesCount > 0 && (
-                <span className="ml-1 px-2 py-0.5 text-xs bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-300 rounded-full font-medium">
-                  {favoritesCount}
-                </span>
-              )}
-            </Link>
 
             {/* 用户头像和登录状态 */}
             <div className="flex items-center space-x-4">
